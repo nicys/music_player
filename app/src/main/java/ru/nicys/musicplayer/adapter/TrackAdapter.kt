@@ -1,10 +1,11 @@
-package ru.nicys.musicplayer
+package ru.nicys.musicplayer.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import ru.nicys.musicplayer.R
 import ru.nicys.musicplayer.databinding.TrackCardBinding
 import ru.nicys.musicplayer.dto.Track
 
