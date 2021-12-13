@@ -18,7 +18,7 @@ interface AlbumApi {
             .baseUrl(BASE_URL)
             .build()
 
-        val apiService: AlbumApi by lazy {
+        val service: AlbumApi by lazy {
             retrofit.create(AlbumApi::class.java)
         }
     }
