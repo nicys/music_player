@@ -4,4 +4,6 @@
     <string name="title_album">Title of album</string>
     <string name="artist">ARTIST:</string>
     <string name="name_artist">Name of artist:</string>
+    <string name="error_loading">Something went wrong. Try again later.</string>
+    <string name="dialog_positive_button">OK</string>
 </resources>
