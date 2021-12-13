@@ -1,10 +1,9 @@
 package ru.nicys.musicplayer
 
-import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.flow.collectLatest
 import ru.nicys.musicplayer.BuildConfig.BASE_URL
@@ -34,7 +33,7 @@ class AppActivity : AppCompatActivity() {
             }
 
             override fun onPause(track: Track) {
-                mediaObserver.onPause()
+                mediaObserver.onStop()
             }
         })
 

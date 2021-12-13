@@ -54,7 +54,6 @@ class TrackViewHolder(
                         track.isPlaying = false
                     }
                 }
-//                onInteractionListener.onPlay(track)
             }
         }
     }
