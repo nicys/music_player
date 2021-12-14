@@ -9,7 +9,7 @@ data class TrackEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val file: String,
-    var isPlaying: Boolean = false,
+    var isPlaying: Boolean,
     val valalbumId: Int,
 ) {
     fun toDto(): Track = Track(id, file, isPlaying, valalbumId)
