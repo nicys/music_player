@@ -10,7 +10,7 @@ import ru.nicys.musicplayer.entity.TrackEntity
 
 @Dao
 interface TrackDao {
-    @Query("SELECT * FROM TrackEntity ORDER BY id DESC")
+    @Query("SELECT * FROM TrackEntity ORDER BY id")
     fun getTrack(): Flow<List<TrackEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
