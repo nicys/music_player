@@ -74,15 +74,37 @@
         tools:text="genre"
         android:textColor="@color/grey" />
 
+    <ImageButton
+        android:id="@+id/iv_play_button"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_genre"
+        app:layout_constraintBottom_toTopOf="@id/track_list"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/ic_play_48"
+        android:background="@drawable/player_background"
+        android:backgroundTint="@color/black"
+        app:tint="@color/yellow" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/track_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_published"
+        app:layout_constraintTop_toBottomOf="@+id/iv_play_button"
+        app:layout_constraintBottom_toTopOf="@id/player_view"
         android:layout_marginTop="@dimen/margin_top"
         tools:listitem="@layout/track_card"/>
 
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
