@@ -37,11 +37,12 @@ class TrackViewHolder(
     fun bind(track: Track) {
         binding.apply {
             tvTrackName.text = track.file
-            if (track.isPlaying) {
-                fabPlayButton.setImageResource(R.drawable.ic_pause_48)
-            } else {
-                fabPlayButton.setImageResource(R.drawable.ic_play_48)
-            }
+            fabPlayButton.setImageResource(
+                when (track.isPlaying) {
+                    false -> R.drawable.ic_play_48
+                    true -> R.drawable.ic_pause_48
+                }
+            )
 
             fabPlayButton.setOnClickListener {
                 when (track.isPlaying) {
