@@ -25,16 +25,6 @@ class TrackRepositoryImpl(
 
     override val data = tracksDao.getTrack().map(List<TrackEntity>::toTrack)
 
-    override suspend fun getTracks() {
-        try {
-            tracksDao.getTrack()
-        } catch (e: IOException) {
-            throw NetworkException
-        } catch (e: Exception) {
-            throw UnknownException
-        }
-    }
-
     override suspend fun getAlbum() = flow {
         try {
             val response = AlbumApi.service.getAlbum()
@@ -50,16 +40,6 @@ class TrackRepositoryImpl(
             throw NetworkException
         } catch (e: Exception) {
             throw  UnknownException
-        }
-    }
-
-    override suspend fun isPlaying(id: Int) {
-        try {
-            tracksDao.isPlaying(id)
-        } catch (e: IOException) {
-            throw NetworkException
-        } catch (e: Exception) {
-            throw UnknownException
         }
     }
 }
